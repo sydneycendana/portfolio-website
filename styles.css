@@ -11,6 +11,8 @@ body {
     background-color: rgb(47, 66, 104) !important;
 }
 
+
+
 .navbar {
     /* position: sticky; */
     top: 0;
@@ -56,13 +58,11 @@ body {
     flex: 1;
     padding: 2rem;
     overflow-y: scroll;
-    /* change to overflow-y: auto */
-    /* scroll-snap-type: y mandatory; */
+
 }
 
 .left-column::-webkit-scrollbar {
     display: none;
-    /* hide scrollbar on WebKit browsers */
 }
 
 .right-column {
@@ -118,6 +118,29 @@ p {
     /* text-align: center; */
 }
 
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 50px;
+    gap: 100px;
+}
+
+.project-container img {
+    width: 75%;
+    margin-top: 25px;
+    transition: transform 0.3s ease;
+    /* Add a smooth transition effect */
+}
+
+.project-container img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
+    /* Add a white box shadow on hover */
+    /* Scale the image up by 10% on hover */
+}
+
 
 @media screen and (max-width: 768px) {
     .container {
@@ -139,4 +162,17 @@ p {
         margin-top: 20px;
         order: 1;
     }
+}
+
+
+/* Your existing CSS styles here */
+
+.projects-trigger {
+    /* Create a full-height element to trigger the projects section animation */
+    height: 100vh;
+    position: sticky;
+    top: 100vh;
+    z-index: 1;
+    /* Add a higher z-index to ensure it doesn't overlap the right column */
+    background-color: transparent;
 }
