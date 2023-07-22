@@ -11,16 +11,22 @@ body {
     background-color: rgb(47, 66, 104) !important;
 }
 
-
+.page-container {
+    margin: 0 100px;
+}
 
 .navbar {
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     z-index: 9999;
     width: 100%;
     padding: 50px 50px 0px;
     display: flex;
     justify-content: space-between;
+}
+
+.home {
+    font-weight: bolder;
 }
 
 .navbar::before {
@@ -31,7 +37,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(47, 66, 104, 0.7) 0%, rgba(47, 66, 104, 0) 100%);
+    background: linear-gradient(to bottom,
+            rgba(10, 30, 60, 0.9) 0%,
+            /* Darker starting color (adjust RGB values as needed) */
+            rgba(10, 30, 60, 0.4) 50%,
+            /* Darker middle color (adjust RGB values as needed) */
+            rgba(10, 30, 60, 0) 100%
+            /* Darker ending color (adjust RGB values as needed) */
+        );
+    filter: blur(10px);
     z-index: -1;
 }
 
@@ -50,24 +64,19 @@ body {
 
 .container {
     display: flex;
-    height: 100vh;
+    flex-direction: row;
+    /* height: 100vh; */
     margin-top: -100px;
 }
 
 .left-column {
     flex: 1;
     padding: 2rem;
-    overflow-y: scroll;
-
-}
-
-.left-column::-webkit-scrollbar {
-    display: none;
 }
 
 .right-column {
     flex: 1;
-    position: sticky;
+    /* position: sticky; */
     top: 50%;
     padding: 2rem;
 }
@@ -98,6 +107,15 @@ body {
     color: #666;
 }
 
+.hero-image {
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+    /* Increase this value for a larger scale */
+}
+
 h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -108,14 +126,12 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.content-wrapper {
-    scroll-snap-align: center;
-    /* Center the element in the scroll snap */
+.about-me-wrapper {
     padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
+    margin: 0 50px;
 }
 
 .projects-section {
@@ -126,8 +142,21 @@ p {
     gap: 100px;
 }
 
+.project-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 50px;
+
+}
+
+.project-container h4 {
+    margin: 0 auto;
+}
+
 .project-container img {
-    width: 75%;
+    width: 50%;
     margin-top: 25px;
     transition: transform 0.3s ease;
     /* Add a smooth transition effect */

@@ -11,7 +11,7 @@
 
 <body>
     <div class="navbar">
-        <p>Sydney</p>
+        <p class="home">Sydney</p>
         <div class="links" style="position: relative; z-index: 1;">
             <div style="display: inline-block;">
                 <a href="https://github.com/sydneycendana" target="_blank">
@@ -38,88 +38,101 @@
             </div>
         </div>
     </div>
+    <div class="page-container">
 
-    <div class="container" style="z-index: 2;">
-        <div class="left-column">
-            <div class="hero">
-                <div class="hero-text">
-                    <h1 class="hero-title">Hi, I'm Sydney</h1>
-                    <p class="hero-subtitle">Full Stack Web Developer</p>
-                    <p><a href="#about-me">About Me</a> | <a href="#skills">Skills</a> | <a
-                            href="#projects">Projects</a></p>
+        <div class="container" style="z-index: 2;">
+            <div class="left-column">
+                <div class="hero">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Hi, I'm Sydney</h1>
+                        <p class="hero-subtitle">Full Stack Web Developer</p>
+                        <p><a href="#about-me">About Me</a> | <a href="#skills">Skills</a> | <a
+                                href="#projects">Projects</a></p>
 
+                    </div>
                 </div>
             </div>
-            <div class="content-wrapper">
-                <h2 id="about-me">About Me</h2>
-                <p>With a background in marketing and business operations, I ventured into the world of programming
-                    during the pandemic,
-                    driven by my passion for problem-solving, building, and the creative processs. I took the decisive
-                    step last August 2022
-                    to enroll in a rigorous year-long bootcamp at App Academy. This experience provided me with the
-                    discipline and
-                    structured learning environment I needed to fully pursue my newly discovered passion for software
-                    engineering.</p>
-
-                <p>What sets me apart is my unique blend of business acumen and technical skills. Coming from a
-                    business mindset, I
-                    constantly keep the end user in mind, ensuring that my work aligns with their needs and
-                    expectations. This perspective
-                    allows me to approach software engineering from a holistic standpoint, creating solutions that not
-                    only meet technical
-                    requirements but also drive business growth.</p>
-
-                <p>Through a project involving the rebuilding of my current company's website, I have already gained
-                    valuable real-world
-                    experience. This opportunity allowed me to apply my knowledge in a professional setting and receive
-                    guidance from an
-                    experienced technologist.</p>
-
-                <p>I am now eagerly seeking new challenges and opportunities to leverage my expertise in software
-                    engineering, business
-                    strategy, and customer-centric thinking. If you're looking for a dynamic and versatile professional
-                    who can bridge the
-                    gap between technical and business realms, let's connect!</p>
+            <div class="right-column" style="display: flex; justify-content: center; align-items: center;">
+                <img class="hero-image" src="/images/hero-illustration.png" alt="Coding Illustration"
+                    style="max-width: 80%; height: auto;">
             </div>
-            <h2 id="skills">Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>MongoDB</li>
-                <li>SQL</li>
-            </ul>
         </div>
-        <div class="right-column" style="display: flex; justify-content: center; align-items: center;">
-            <img src="/images/hero-illustration.png" alt="Coding Illustration" style="max-width: 80%; height: auto;">
-        </div>
-    </div>
 
-    <div class="projects-section">
-        <h2 id="projects">Projects</h2>
-        <div class="project-container">
-            <h4>RightClick Professional Services Website</h4>
-            <img src="./images/rps-website.gif" alt="RightClick Professional Services" />
+        <div class="about-me-wrapper">
+            <h2 id="about-me">About Me</h2>
+            <p>In 2020, I graduated from the University of Connecticut, where I studied business and earned my degree.
+                With
+                a
+                professional background in marketing and business operations, my journey took a new direction during the
+                pandemic.
+                Driven by a profound passion for problem-solving, building, and the creative process, I ventured into
+                the
+                world of
+                programming.</p>
+
+            <p>What sets me apart is my unique blend of business acumen and technical skills. Coming from a
+                business mindset, I
+                constantly keep the end user in mind, ensuring that my work aligns with their needs and
+                expectations. This perspective
+                allows me to approach software engineering from a holistic standpoint, creating solutions that not
+                only meet technical
+                requirements but also drive business growth.</p>
+
+            <p>Through a project involving the rebuilding of my current company's website, I have already gained
+                valuable real-world
+                experience. This opportunity allowed me to apply my knowledge in a professional setting and receive
+                guidance from an
+                experienced technologist.</p>
+
+            <p>I am now eagerly seeking new challenges and opportunities to leverage my expertise in software
+                engineering, business
+                strategy, and customer-centric thinking. If you're looking for a dynamic and versatile professional
+                who can bridge the
+                gap between technical and business realms, let's connect!</p>
         </div>
-        <div class="project-container">
-            <h4>Workshop</h4>
-            <img src="./images/workshop.gif" alt="Workshop" />
-        </div>
-        <div class="project-container">
-            <h4>Home Hopper</h4>
-            <img src="./images/home-hopper.gif" alt="Home Hopper" />
+        <h2 id="skills">Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>MongoDB</li>
+            <li>SQL</li>
+        </ul>
+
+        <div class="projects-section">
+            <h2 id="projects">Projects</h2>
+            <div class="project-container">
+                <h4>RightClick Professional Services Website</h4>
+                <img src="./images/rps-website.gif" alt="RightClick Professional Services" />
+            </div>
+            <div class="project-container">
+                <h4>Workshop</h4>
+                <img src="./images/workshop.gif" alt="Workshop" />
+            </div>
+            <div class="project-container">
+                <h4>Home Hopper</h4>
+                <img src="./images/home-hopper.gif" alt="Home Hopper" />
+            </div>
         </div>
     </div>
     <script>
-        // Function to scroll to a specific section smoothly and position it 50% from the top
+        // Function to scroll to a specific section smoothly and position it a little bit from the top
         function scrollToSection(id) {
             const section = document.getElementById(id);
-            section.scrollIntoView({ behavior: "smooth", block: "center" });
+            const offset = 100; // Adjust this value to position the element as desired (in pixels)
+            const elementPosition = section.getBoundingClientRect().top;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollBy({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
         }
     </script>
+
     <script>
         // Attach the scrollToSection function to the links in the hero text
         const aboutMeLink = document.querySelector('a[href="#about-me"]');
@@ -141,7 +154,7 @@
             scrollToSection('projects');
         });
     </script>
-    <script>
+    <!-- <script>
         const leftColumn = document.querySelector('.left-column');
         const rightColumn = document.querySelector('.right-column');
         let scrollingEnabled = false;
@@ -160,7 +173,7 @@
                 rightColumn.scrollTop += event.deltaY;
             }
         });
-    </script>
+    </script> -->
 
 
 </body>
