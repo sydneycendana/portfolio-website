@@ -46,8 +46,7 @@
                     <div class="hero-text">
                         <h1 class="hero-title">Hi, I'm Sydney</h1>
                         <p class="hero-subtitle">Full Stack Web Developer</p>
-                        <p><a href="#about-me">About Me</a> | <a href="#skills">Skills</a> | <a
-                                href="#projects">Projects</a></p>
+                        <p><a href="#about-me">About Me</a> | <a href="#projects">Projects</a></p>
 
                     </div>
                 </div>
@@ -90,17 +89,7 @@
                 who can bridge the
                 gap between technical and business realms, let's connect!</p>
         </div>
-        <h2 id="skills">Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>SQL</li>
-        </ul>
+
 
         <div class="projects-section">
             <h2 id="projects">Projects</h2>
@@ -136,7 +125,6 @@
     <script>
         // Attach the scrollToSection function to the links in the hero text
         const aboutMeLink = document.querySelector('a[href="#about-me"]');
-        const skillsLink = document.querySelector('a[href="#skills"]');
         const projectsLink = document.querySelector('a[href="#projects"]');
 
         aboutMeLink.addEventListener('click', (event) => {
@@ -144,10 +132,6 @@
             scrollToSection('about-me');
         });
 
-        skillsLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            scrollToSection('skills');
-        });
 
         projectsLink.addEventListener('click', (event) => {
             event.preventDefault();
