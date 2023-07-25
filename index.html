@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class="about-me-wrapper">
+        <div class="about-me-wrapper scroll-snap-section">
             <h2 id="about-me">About Me</h2>
             <p>In 2020, I graduated from the University of Connecticut, where I studied business and earned my degree.
                 With
@@ -91,19 +91,35 @@
         </div>
 
 
-        <div class="projects-section">
-            <h2 id="projects">Projects</h2>
-            <div class="project-container">
-                <h4>RightClick Professional Services Website</h4>
-                <img src="./images/rps-website.gif" alt="RightClick Professional Services" />
+        <div class="section scroll-snap-section">
+            <div class="project-container scroll-snap-section" id="projects">
+                <div class="columns">
+                    <div class="project-column w-col w-col-7">
+                        <img src="./images/rps-website.gif" alt="RightClick Professional Services" />
+                    </div>
+                    <div class="text-column w-col w-col-5">
+                        <h4>RightClick Professional Services Website</h4>
+                    </div>
+
+
+                </div>
             </div>
-            <div class="project-container">
-                <h4>Workshop</h4>
-                <img src="./images/workshop.gif" alt="Workshop" />
+            <div class="project-container scroll-snap-section">
+                <div class="columns">
+                    <div class="text-column w-col w-col-5">
+                        <h4>Workshop</h4>
+                    </div>
+                    <div class="project-column w-col w-col-7"><img src="./images/workshop.gif" alt="Workshop" /></div>
+                </div>
             </div>
-            <div class="project-container">
-                <h4>Home Hopper</h4>
-                <img src="./images/home-hopper.gif" alt="Home Hopper" />
+            <div class="project-container scroll-snap-section">
+                <div class="columns">
+                    <div class="project-column w-col w-col-7"><img src="./images/home-hopper.gif" alt="Home Hopper" />
+                    </div>
+                    <div class="text-column w-col w-col-5">
+                        <h4>Home Hopper</h4>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -138,27 +154,6 @@
             scrollToSection('projects');
         });
     </script>
-    <!-- <script>
-        const leftColumn = document.querySelector('.left-column');
-        const rightColumn = document.querySelector('.right-column');
-        let scrollingEnabled = false;
-
-        document.addEventListener('wheel', (event) => {
-            if (!scrollingEnabled) {
-                if (event.clientY > leftColumn.getBoundingClientRect().bottom && event.clientX < rightColumn.getBoundingClientRect().left) {
-                    scrollingEnabled = true;
-                } else {
-                    event.preventDefault();
-                }
-            };
-
-            if (scrollingEnabled) {
-                leftColumn.scrollTop += event.deltaY;
-                rightColumn.scrollTop += event.deltaY;
-            }
-        });
-    </script> -->
-
 
 </body>
 

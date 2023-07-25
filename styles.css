@@ -15,6 +15,14 @@ body {
     margin: 0 100px;
 }
 
+.section {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+
 .navbar {
     position: sticky;
     top: 0;
@@ -27,6 +35,12 @@ body {
 
 .home {
     font-weight: bolder;
+}
+
+.scroll-snap-section {
+    scroll-snap-align: start;
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 100px;
 }
 
 .navbar::before {
@@ -131,45 +145,63 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 50px;
-}
-
-.projects-section {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 10px 50px;
-    gap: 100px;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 1140px;
 }
 
 .project-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    height: auto;
+    max-width: 1140px;
+    margin-top: 150px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
-    margin: 0 50px;
-
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.project-container h4 {
-    margin: 0 auto;
+.columns {
+    display: flex;
+    width: auto;
+    margin: auto 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    align-items: center;
+    align-self: auto;
+    flex: 1;
 }
 
-.project-container img {
-    width: 50%;
-    margin-top: 25px;
-    transition: transform 0.3s ease;
-    /* Add a smooth transition effect */
+.text-column h4 {
+    font-size: 32px;
+    font-weight: 300;
 }
 
-.project-container img:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.8);
-    /* Add a white box shadow on hover */
-    /* Scale the image up by 10% on hover */
+.project-column {
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
 }
 
+.w-col {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.w-col-7 {
+    width: 58.33333333%;
+}
+
+.w-col-5 {
+    width: 41.66666667%;
+}
 
 @media screen and (max-width: 768px) {
     .container {
