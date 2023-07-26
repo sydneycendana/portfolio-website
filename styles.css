@@ -401,6 +401,21 @@ p {
     .text-column-left {
         order: 1;
     }
+
+    .text-wrap {
+        text-align: center;
+        align-items: center;
+    }
+
+    .navbar-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .jump-links a,
+    .jump-links {
+        font-size: 48px;
+    }
 }
 
 
