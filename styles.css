@@ -7,12 +7,13 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Titillium Web', sans-serif;
     background-color: rgb(47, 66, 104) !important;
 }
 
 .page-container {
-    margin: 0 100px;
+    margin: 0 auto;
+    min-width: 1140px;
 }
 
 .section {
@@ -27,6 +28,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 9999;
+    min-width: 1140px;
     width: 100%;
     padding: 50px 50px 0px;
     display: flex;
@@ -76,6 +78,17 @@ body {
     gap: 10px;
 }
 
+a[href="https://github.com/sydneycendana"] svg path:hover {
+    fill: rgb(150, 200, 255);
+    /* Change the fill color to black on hover */
+}
+
+/* LinkedIn icon */
+a[href="https://www.linkedin.com/in/sydneycendana/"] svg path:hover {
+    fill: rgb(150, 200, 255);
+    /* Change the fill color to LinkedIn blue on hover */
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -100,7 +113,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    margin: 0 auto;
     height: 100vh;
+    max-width: 85%;
     scroll-snap-align: start;
     scroll-snap-type: y mandatory;
 }
@@ -113,6 +128,7 @@ body {
 .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
+
 }
 
 .hero-subtitle {
@@ -128,6 +144,14 @@ body {
 .hero-image:hover {
     transform: scale(1.05);
     /* Increase this value for a larger scale */
+}
+
+.jump-links a {
+    text-decoration: none;
+}
+
+.jump-links a:hover {
+    color: rgb(150, 200, 255);
 }
 
 h2 {
@@ -175,15 +199,150 @@ p {
     flex: 1;
 }
 
-.text-column h4 {
+.text-column-left {
+    padding-right: 100px;
+    text-align: center;
+}
+
+.text-column-right {
+    padding-right: 30px;
+    padding-left: 80px;
+}
+
+.text-column-left h4,
+.text-column-right h4 {
     font-size: 32px;
     font-weight: 300;
+}
+
+.text-wrap {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-wrap p {
+    color: lightgray;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.button {
+    padding: 12px 30px;
+    border-radius: 40px;
+    background-color: #edf2f5;
+    transition: background-color 200ms ease;
+    color: #5a6065;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 20px;
+    width: fit-content;
+    /* margin: 0 auto; */
+}
+
+.button:hover {
+    background-color: rgb(150, 200, 255);
+    ;
+}
+
+.text-column-left .button {
+    margin: 0 auto;
 }
 
 .project-column {
     padding-right: 0;
     padding-left: 0;
     text-align: center;
+    transition: top 0.5s ease-out;
+
+}
+
+.project-column:hover {
+    top: -5px;
+}
+
+.project-image {
+    position: relative;
+    z-index: 3;
+    pointer-events: all;
+    cursor: pointer !important;
+    border-radius: 5px;
+}
+
+/* When the viewport width is less than or equal to 479px */
+@media (max-width: 479px) {
+    .project-image {
+        width: 601px;
+    }
+
+    .about-me-wrapper {
+        width: 700px;
+    }
+}
+
+/* When the viewport width is greater than 479px and less than or equal to 724px */
+@media (min-width: 480px) and (max-width: 724px) {
+    .project-image {
+        width: 83vw;
+    }
+
+    .about-me-wrapper {
+        width: 700px;
+    }
+}
+
+/* When the viewport width is greater than 724px and less than or equal to 767px */
+@media (min-width: 725px) and (max-width: 767px) {
+    .project-image {
+        width: 601px;
+    }
+
+    .about-me-wrapper {
+        width: 750px;
+    }
+}
+
+/* When the viewport width is greater than 767px and less than or equal to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .project-image {
+        width: 53vw;
+    }
+
+    .text-wrap {
+        width: 350px;
+    }
+
+    .about-me-wrapper {
+        width: 850px;
+    }
+}
+
+/* When the viewport width is greater than 991px and less than or equal to 1279px */
+@media (min-width: 992px) and (max-width: 1279px) {
+    .project-image {
+        width: 45vw;
+    }
+
+    .text-column-left h4,
+    .text-column-right h4 {
+        font-size: 26px;
+    }
+
+    .text-wrap {
+        width: 380px;
+    }
+
+    .about-me-wrapper {
+        width: 1000px;
+    }
+}
+
+/* When the viewport width is greater than 1279px */
+@media (min-width: 1280px) {
+    .project-image {
+        width: 601px;
+    }
 }
 
 .w-col {
@@ -221,6 +380,19 @@ p {
     .right-column {
         position: static;
         margin-top: 20px;
+        order: 1;
+    }
+
+    .columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text-column-right h4 {
+        text-align: center;
+    }
+
+    .text-column-left {
         order: 1;
     }
 }
