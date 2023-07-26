@@ -14,6 +14,7 @@ body {
 .page-container {
     margin: 0 auto;
     min-width: 1140px;
+    margin-bottom: 100px;
 }
 
 .section {
@@ -131,11 +132,6 @@ a[href="https://www.linkedin.com/in/sydneycendana/"] svg path:hover {
 
 }
 
-.hero-subtitle {
-    font-size: 1.5rem;
-    font-style: italic;
-    color: #666;
-}
 
 .hero-image {
     transition: transform 0.3s ease;
@@ -146,8 +142,13 @@ a[href="https://www.linkedin.com/in/sydneycendana/"] svg path:hover {
     /* Increase this value for a larger scale */
 }
 
+.jump-links {
+    color: #b4b0b0;
+}
+
 .jump-links a {
     text-decoration: none;
+    color: #b4b0b0;
 }
 
 .jump-links a:hover {

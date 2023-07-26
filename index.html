@@ -52,8 +52,8 @@
                     <div class="hero-text">
                         <h1 class="hero-title"> I'm a Software Engineer aiming to drive business goals
                             and enrich user experiences </h1>
-                        <p class="hero-subtitle">Full Stack Web Developer</p>
-                        <p class="jump-links"><a href="#about-me">About Me</a> | <a href="#projects">Projects</a></p>
+                        <p class="jump-links"><a href="#projects">Projects</a> / <a
+                                href="mailto:sydneycendana@gmail.com" target="_blank">Get In Touch</a></p>
 
                     </div>
                 </div>
@@ -62,39 +62,6 @@
                 <img class="hero-image" src="/images/hero-illustration.png" alt="Coding Illustration"
                     style="max-width: 80%; height: auto;">
             </div>
-        </div>
-
-        <div class="about-me-wrapper scroll-snap-section">
-            <h2 id="about-me">About Me</h2>
-            <p>With a background in marketing and business operations, I ventured into the world of programming during a
-                systems
-                migration project that I led for RightClick. Driven by my passion for problem-solving, building, and the
-                creative
-                process, I took the decisive step last August 2022 to enroll in a rigorous year-long bootcamp at App
-                Academy. This
-                experience provided me with the discipline and structured learning environment I needed to fully pursue
-                my newly
-                discovered passion for software engineering.</p>
-
-            <p>What sets me apart is my unique blend of business acumen and technical skills. Coming from a
-                business mindset, I
-                constantly keep the end user in mind, ensuring that my work aligns with their needs and
-                expectations. This perspective
-                allows me to approach software engineering from a holistic standpoint, creating solutions that not
-                only meet technical
-                requirements but also drive business growth.</p>
-
-            <p>Through a project involving the rebuilding of my current company's website, I have already gained
-                valuable real-world
-                experience. This opportunity allowed me to apply my knowledge in a professional setting and receive
-                guidance from an
-                experienced technologist.</p>
-
-            <p>I am now eagerly seeking new challenges and opportunities to leverage my expertise in software
-                engineering, business
-                strategy, and customer-centric thinking. If you're looking for a dynamic and versatile professional
-                who can bridge the
-                gap between technical and business realms, let's connect!</p>
         </div>
 
 
@@ -156,10 +123,9 @@
         </div>
     </div>
     <script>
-        // Function to scroll to a specific section smoothly and position it a little bit from the top
         function scrollToSection(id) {
             const section = document.getElementById(id);
-            const offset = 100; // Adjust this value to position the element as desired (in pixels)
+            const offset = 100;
             const elementPosition = section.getBoundingClientRect().top;
             const offsetPosition = elementPosition - offset;
 
@@ -171,16 +137,8 @@
     </script>
 
     <script>
-        // Attach the scrollToSection function to the links in the hero text
-        const aboutMeLink = document.querySelector('a[href="#about-me"]');
         const projectsLink = document.querySelector('a[href="#projects"]');
         const homeLink = document.querySelector('a[href="#hero"]');
-
-
-        aboutMeLink.addEventListener('click', (event) => {
-            event.preventDefault();
-            scrollToSection('about-me');
-        });
 
 
         projectsLink.addEventListener('click', (event) => {
